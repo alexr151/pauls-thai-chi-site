@@ -3,10 +3,10 @@
 // touching the code. See README.md for setup steps.
 (function () {
   // Paste the ID from your Google Sheet's URL, e.g.
-  const SHEET_ID = "https://docs.google.com/spreadsheets/d/1IO_1w338BH3xAbgi4XfKFVhzRok_GtJJj0S7BktYaLs/edit";
+  const SHEET_ID = "1PvZVDhQu937oOIHckoZPi1_lqOMV4SsNK6U8iyyIQ4s";
 
   // gid of the "Form Responses" tab (0 if it's the only/first sheet)
-  const GID = 0;
+  const GID = 700720433;
 
   // Column order must match the Google Form's question order.
   // Column A (Timestamp) is added automatically by Forms and is unused here.
@@ -43,7 +43,10 @@
       FIELD_MAP.forEach((key, i) => {
         if (!key) return;
         const cell = row.c[i];
-        data[key] = cell && cell.v != null ? String(cell.v).trim() : "";
+        // Date/Time form questions come back as raw values like "Date(2026,6,12)" in `v`;
+        // `f` holds Google's human-readable formatted string (e.g. "7/12/2026") when present.
+        const value = cell ? (cell.f != null ? cell.f : cell.v) : null;
+        data[key] = value != null ? String(value).trim() : "";
       });
 
       renderSchedule(data);
