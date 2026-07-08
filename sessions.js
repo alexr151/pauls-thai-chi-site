@@ -3,7 +3,7 @@
 // touching the code. See README.md for setup steps.
 (function () {
   // Paste the ID from your Google Sheet's URL, e.g.
-  const SHEET_ID = "https://docs.google.com/spreadsheets/d/1FAIpQLSfYG83FQvJ1g4kE-kpM8_QjQRyDWWgAKZnaxnBzv_zpuFUqgw/edit";
+  const SHEET_ID = "https://docs.google.com/spreadsheets/d/1IO_1w338BH3xAbgi4XfKFVhzRok_GtJJj0S7BktYaLs/edit";
 
   // gid of the "Form Responses" tab (0 if it's the only/first sheet)
   const GID = 0;
