@@ -18,15 +18,21 @@
   <p style="text-align:center">Welcome! Join us for peaceful Tai Chi practice.</p>
 
   <h2>📅 Upcoming Sessions</h2>
-  <div class="session">
-    <strong>Tuesday & Thursday</strong><br/>
-    9:00 AM – 10:00 AM<br/>
-    📍 Riverside Park, Pavilion 3
+  <div id="sessions-container">
+    <!-- Default/fallback schedule, shown if the live schedule can't be loaded -->
+    <div class="session">
+      <strong>Tuesday & Thursday</strong><br/>
+      9:00 AM – 10:00 AM<br/>
+      📍 Riverside Park, Pavilion 3
+    </div>
+    <div class="session">
+      <strong>Saturday</strong><br/>
+      8:00 AM – 9:30 AM<br/>
+      📍 Community Center, Room B
+    </div>
   </div>
-  <div class="session">
-    <strong>Saturday</strong><br/>
-    8:00 AM – 9:30 AM<br/>
-    📍 Community Center, Room B
-  </div>
+  <p id="sessions-notes"></p>
+
+  <script src="sessions.js"></script>
 </body>
 </html>
